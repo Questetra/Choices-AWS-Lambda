@@ -20,7 +20,8 @@ exports.handler = async (event) => {
   }
 
   try {
-    const responseJson = await streamFileRead('choice.csv', query, parent, values); //ファイル読み込み、完了まで待機
+    const responseJson = await streamFileRead('choice.csv', query, parent, values); //'choice.csv'の部分で読み込むファイル名を指定
+    //ファイル読み込み、完了まで待機
     const responseXml = xmlparser.toXml(responseJson)
     return formatResponse(responseXml);
   } catch (e) {
@@ -70,7 +71,7 @@ function streamFileRead(fileName, query, parent, values) {
     const reader = readline.createInterface({ input: stream });
 
     reader.on("line", (line) => {
-      const array = line.split(',');
+      const array = line.split(','); //tsv を使用する場合 ',' を '\t' に置き換える
       const attrsTmp = {
         value: array[0],
         display: array[1]
