@@ -20,7 +20,7 @@ exports.handler = async (event) => {
   }
 
   try {
-    const responseJson = await streamFileRead('choice.csv', query, parent, values); //'choice.csv'の部分で読み込むファイル名を指定
+    const responseJson = await streamFileRead('choice.csv', query, parent, values); //'choice.csv' の部分で読み込むファイル名を指定
     //ファイル読み込み、完了まで待機
     const responseXml = xmlparser.toXml(responseJson)
     return formatResponse(responseXml);

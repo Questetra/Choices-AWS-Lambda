@@ -20,7 +20,8 @@ exports.handler = async (event) => {
   }
 
   try {
-    const responseJson = await streamFileRead('choice.xml', query, parent, values); //ファイル読み込み、完了まで待機
+    const responseJson = await streamFileRead('choice.xml', query, parent, values);  //'choice.xml' の部分で読み込むファイル名を指定
+    //ファイル読み込み、完了まで待機
     const responseXml = xmlparser.toXml(responseJson)
     return formatResponse(responseXml);
   } catch (e) {
@@ -68,8 +69,6 @@ function streamFileRead(fileName, query, parent, values) {
     const parser = new xmlstream(); //XML のパーサー
 
     parser.on('opentag', (name, attrs) => {
-      // name = 'item'
-      // attrs = { value: '01', display: 'display' }
       if (name === 'item') {
         const attrsTmp = {
           value: attrs.value,
@@ -88,17 +87,17 @@ function streamFileRead(fileName, query, parent, values) {
     });
 
     parser.on('finish', () => {
-      // Stream is completed
+      // 読み込み終了時
       resolve(data);
     });
 
     parser.on('error', err => {
-      // Handle a parsing error
+      // parser でエラー発生時
       reject(err);
     });
 
     // Stream のエラー処理
-    stream.on("error", (err) => {
+    stream.on("error", err => {
       reject(err);
     });
 
