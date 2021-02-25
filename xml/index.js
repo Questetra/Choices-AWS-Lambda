@@ -80,8 +80,6 @@ function streamXmlRead(fileName, query, parent, values) {
     const parser = new xmlstream(); //XML のパーサー
 
     parser.on('opentag', (name, attrs) => {
-      // name = 'item'
-      // attrs = { value: '01', display: 'display' }
       if (name === 'item') {
         const attrsTmp = {
           value: attrs.value,
@@ -100,17 +98,17 @@ function streamXmlRead(fileName, query, parent, values) {
     });
 
     parser.on('finish', () => {
-      // Stream is completed
+      // 読み込み終了時
       resolve(data);
     });
 
     parser.on('error', err => {
-      // Handle a parsing error
+      // parser でエラー発生時
       reject(err);
     });
 
     // Stream のエラー処理
-    stream.on("error", (err) => {
+    stream.on("error", err => {
       reject(err);
     });
 
