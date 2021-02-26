@@ -1,0 +1,52 @@
+<items>
+  <item value="AL" display="Alabama" />
+  <item value="AK" display="Alaska" />
+  <item value="AZ" display="Arizona" />
+  <item value="AR" display="Arkansas" />
+  <item value="CA" display="California" />
+  <item value="CO" display="Colorado" />
+  <item value="CT" display="Connecticut " />
+  <item value="DE" display="Delaware" />
+  <item value="FL" display="Florida" />
+  <item value="GA" display="Georgia" />
+  <item value="HI" display="Hawaii" />
+  <item value="ID" display="Idaho" />
+  <item value="IL" display="Illinois" />
+  <item value="IN" display="Indiana" />
+  <item value="IA" display="Iowa" />
+  <item value="KS" display="Kansas" />
+  <item value="KY" display="Kentucky" />
+  <item value="LA" display="Louisiana" />
+  <item value="ME" display="Maine" />
+  <item value="MD" display="Maryland" />
+  <item value="MA" display="Massachusetts" />
+  <item value="MI" display="Michigan" />
+  <item value="MN" display="Minnesota" />
+  <item value="MS" display="Mississippi" />
+  <item value="MO" display="Missouri" />
+  <item value="MT" display="Montana" />
+  <item value="NE" display="Nebraska" />
+  <item value="NV" display="Nevada" />
+  <item value="NH" display="New Hampshire" />
+  <item value="NJ" display="New Jersey" />
+  <item value="NM" display="New Mexico" />
+  <item value="NY" display="New York" />
+  <item value="NC" display="North Carolina" />
+  <item value="ND" display="North Dakota" />
+  <item value="OH" display="Ohio" />
+  <item value="OK" display="Oklahoma" />
+  <item value="OR" display="Oregon" />
+  <item value="PA" display="Pennsylvania" />
+  <item value="RI" display="Rhode Island" />
+  <item value="SC" display="South Carolina" />
+  <item value="SD" display="South Dakota" />
+  <item value="TN" display="Tennessee" />
+  <item value="TX" display="Texas" />
+  <item value="UT" display="Utah" />
+  <item value="VT" display="Vermont" />
+  <item value="VA" display="Virginia" />
+  <item value="WA" display="Washington" />
+  <item value="WV" display="West Virginia" />
+  <item value="WI" display="Wisconsin" />
+  <item value="WY" display="Wyoming" />
+</items>

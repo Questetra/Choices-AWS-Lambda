@@ -9,10 +9,7 @@ Lambda 関数テンプレートです。
 * [Node.js](https://nodejs.org/) / [npm](https://www.npmjs.com/) コマンド
 
 
-使用したい側のディレクトリ内で `npm ci` を実行し、必要なパッケージをインストールしておきます（node_modules ディレクトリが作成されます）。
+ディレクトリ内で `npm ci` を実行し、必要なパッケージをインストールしておきます（node_modules ディレクトリが作成されます）。
 
 ## 使い方
-xml のマスタファイルを使用したい場合は "xml" ディレクトリ、csv/tsv のマスタファイルを使用したい場合は "csv" ディレクトリ内のコードを使用します。
-
-### tsv の場合の設定
-csv/index.js の73行目にある `const array = line.split(',');` を `const array = line.split('\t');`に変更します。
+使用するマスタファイルのファイル名を Lambda の環境変数 "FILE_NAME" にセットします。
