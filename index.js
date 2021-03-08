@@ -161,7 +161,7 @@ function search(query, parent, values, attrs, data){
   //parent が指定されていて、value が parent で指定された文字列から始まらないならば弾く
   if ((values.length !== 0) && (values.indexOf(attrs.value) === -1)) {return;}
   //value が指定されていて、value が values に含まれる文字列と完全一致しないならば弾く
-  data.items.item.push(attrsTmp);
+  data.items.item.push(attrs);
   //上の条件で弾かれなければ data に入れる
   return;
 }
